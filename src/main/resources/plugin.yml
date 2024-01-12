@@ -1,0 +1,4 @@
+name: TeddyLibrary
+version: '${project.version}'
+main: de.teddybear2004.teddylibrary.TeddyLibrary
+api-version: '1.20'
