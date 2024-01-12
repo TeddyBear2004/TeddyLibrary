@@ -5,15 +5,12 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mariadb://URL:PORT/teddy</property>
+		<property name="hibernate.connection.url">jdbc:mariadb://URL:PORT/DATABASE</property>
 		<property name="hibernate.connection.username">USERNAME</property>
 		<property name="hibernate.connection.password">PASSWORD</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="connection.pool_size">5</property>
 		<property name="connection.autocommit">true</property>
-		<property name="initialSize">10</property>
-		<property name="maxActive">5</property>
-		<property name="maxWait">5000</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 	</session-factory>
-
 </hibernate-configuration>

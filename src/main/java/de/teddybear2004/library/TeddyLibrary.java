@@ -1,17 +1,28 @@
-package de.teddybear2004.teddylibrary;
+package de.teddybear2004.library;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import java.io.File;
+import java.util.function.Consumer;
 
 public final class TeddyLibrary extends JavaPlugin {
 
+    private SessionFactoryHandler sessionFactoryHandler;
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        File file = new File(getDataFolder(), "hibernate.cfg.xml");
 
+        if (!file.exists())
+            saveResource("hibernate.cfg.xml", false);
+
+        this.sessionFactoryHandler = new SessionFactoryHandler(file);
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    public SessionFactory getSessionFactory(Consumer<Configuration> configurationConsumer) {
+        return this.sessionFactoryHandler.buildSessionFactory(configurationConsumer);
     }
+
 }
