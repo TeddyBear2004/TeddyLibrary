@@ -24,5 +24,8 @@ public final class TeddyLibrary extends JavaPlugin {
     public SessionFactory getSessionFactory(Consumer<Configuration> configurationConsumer) {
         return this.sessionFactoryHandler.buildSessionFactory(configurationConsumer);
     }
+    public SessionFactory getSessionFactory() {
+        return this.sessionFactoryHandler.buildSessionFactory();
+    }
 
 }

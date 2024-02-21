@@ -21,5 +21,8 @@ public class SessionFactoryHandler {
             return configuration.buildSessionFactory();
         });
     }
+    public SessionFactory buildSessionFactory() {
+        return ClassLoaderUtil.getFromStandardClassLoader(() -> new Configuration().configure(this.baseConfig).buildSessionFactory());
+    }
 
 }
