@@ -13,6 +13,10 @@
 		<property name="connection.autocommit">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
+		<property name="hibernate.connection.autoReconnect">true</property>
+		<property name="hibernate.connection.autoReconnectForPools">true</property>
+		<property name="hibernate.connection.is-connection-validation-required">true</property>
+
 		<mapping class="de.teddy.bansystem.tables.BansystemPlayer"/>
 		<mapping class="de.teddy.bansystem.tables.BansystemPunishment"/>
 		<mapping class="de.teddy.bansystem.tables.BansystemReasons"/>
