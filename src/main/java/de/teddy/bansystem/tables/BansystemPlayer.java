@@ -36,7 +36,7 @@ public class BansystemPlayer implements Serializable {
 	@Column(name = "last_login")
 	private Date lastLogin;
 
-	@Column(name = "cam_owner_uuid", nullable = false, unique = true, length = 36, columnDefinition = "varchar(36)")
+	@Column(name = "cam_owner_uuid", length = 36, columnDefinition = "varchar(36)")
 	private String camOwnerUuid;
 
 	public BansystemPlayer(){}
