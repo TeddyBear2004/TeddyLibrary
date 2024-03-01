@@ -30,6 +30,9 @@ public class BansystemToken implements Serializable {
 	@Column(name = "gamemode", nullable = false)
 	private String gamemode;
 
+	@ManyToOne(fetch = FetchType.EAGER)
+	private BansystemPlayer holder;
+
 	@Override
 	public boolean equals(Object o){
 		if(this == o)
