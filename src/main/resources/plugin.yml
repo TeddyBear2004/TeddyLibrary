@@ -4,4 +4,5 @@ main: de.teddybear2004.library.TeddyLibrary
 api-version: '1.20'
 libraries:
   - org.hibernate:hibernate-core:6.1.3.Final
+  - org.hibernate:hibernate-c3p0:6.1.3.Final
   - org.mariadb.jdbc:mariadb-java-client:3.1.0
