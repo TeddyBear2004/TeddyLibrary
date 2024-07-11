@@ -16,12 +16,5 @@
 		<property name="hibernate.connection.autoReconnect">true</property>
 		<property name="hibernate.connection.autoReconnectForPools">true</property>
 		<property name="hibernate.connection.is-connection-validation-required">true</property>
-
-		<mapping class="de.teddy.bansystem.tables.BansystemPlayer"/>
-		<mapping class="de.teddy.bansystem.tables.BansystemPunishment"/>
-		<mapping class="de.teddy.bansystem.tables.BansystemReasons"/>
-		<mapping class="de.teddy.bansystem.tables.BansystemToken"/>
-		<mapping class="de.teddy.bansystem.tables.BansystemWhitelist"/>
-
 	</session-factory>
 </hibernate-configuration>
